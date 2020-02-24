@@ -1,0 +1,11 @@
+.form__block-wrapper {
+  margin-bottom: 10px;
+}
+
+.form__block-wrapper--end {
+  margin-bottom: 0;
+}
+
+.form__block {
+  margin-bottom: 20px;
+}
