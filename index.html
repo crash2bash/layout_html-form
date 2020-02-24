@@ -9,7 +9,91 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>HTML Form</h1>
+  <form class="form" action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+    <fieldset class="form__personal-info form__block">
+      <legend>Personal information</legend>
+      <div class="form__block-wrapper">
+        <label for="surname">Surname: </label>
+        <input type="text" name="surname" id="surname" autocomplete="off">
+      </div>
+      <div class="form__block-wrapper">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" autocomplete="off">
+      </div>
+      <div class="form__block-wrapper">
+        <label for="age">How old are You? </label>
+        <input type="number" name="age" id="age" value="12" min="1" max="150" maxlength="2">
+      </div>
+      <div class="form__block-wrapper">
+        <label for="birth">Full date of birth: </label>
+        <input type="date" name="birth" id="birth">
+      </div>
+      <div class="form__block-wrapper form__block-wrapper--end">
+        <label for="agremeent">I accept the term of the agremeent </label>
+        <input type="checkbox" name="agremeent" id="agremeent">
+      </div>
+    </fieldset>
+
+    <fieldset class="form__registration form__block">
+      <legend>Registration</legend>
+      <div class="form__block-wrapper">
+        <label for="mail">E-mail: </label>
+        <input type="email" name="e-mail" id="mail" placeholder="email@example.com" required>
+      </div>
+      <div class="form__block-wrapper form__block-wrapper--end">
+        <label for="pass">Password: </label>
+        <input type="password" name="password" id="pass" required>
+      </div>
+    </fieldset>
+
+    <fieldset class="form__personal-facts form__block">
+      <legend>An interesting fact about you!</legend>
+      <div class="form__block-wrapper">
+        <span>Do you love cats? </span>
+        <input type="radio" name="cats" id="yes" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="cats" id="no" value="No">
+        <label for="no">No</label>
+      </div>
+      <div class="form__block-wrapper">
+        <label for="color">What is your favorite color?</label>
+        <input type="color" name="color" id="color">
+      </div>
+      <div class="form__block-wrapper">
+        <label for="sleep">What time you going to the bed? </label>
+        <input type="time" name="sleep-time" id="sleep">
+      </div>
+      <div class="form__block-wrapper">
+        <span>What are your favorite brand of cars? </span>
+        <select name="favorite-car" id="car" multiple>
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="Лада">Лада</option>
+          <option value="" selected></option>
+        </select>
+      </div>
+      <div class="form__block-wrapper form__block-wrapper--end">
+        <label for="rate">How do you rate our work? </label>
+        <input type="range" name="rating" id="rate" min="1" max="10" step="1">
+      </div>
+    </fieldset>
+
+    <fieldset class="form__additional-info form__block">
+      <legend>Additional info:</legend>
+      <div class="form__block-wrapper">
+        <label for="comment">Comments: </label>
+        <textarea name="comments" id="comment"></textarea>
+      </div>
+      <div class="form__block-wrapper form__block-wrapper--end">
+        <label for="recommend">Would you recommend us? </label>
+        <select name="Recommendations" id="recommend">
+          <option value="yes" selected>Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+    </fieldset>
+    <button class="form__submit" type="submit" onsubmit="onSubmit()">Submit</button>
+  </form>
   <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
