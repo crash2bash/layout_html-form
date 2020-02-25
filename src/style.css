@@ -1,8 +1,9 @@
-.form__block-wrapper {
+.form__inner-block {
+  display: block;
   margin-bottom: 10px;
 }
 
-.form__block-wrapper--end {
+.form__inner--end {
   margin-bottom: 0;
 }
 
