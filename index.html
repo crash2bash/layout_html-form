@@ -41,22 +41,22 @@
 
     <fieldset class="form__personal-facts form__block">
       <legend>An interesting fact about you!</legend>
-      <div class="form__inner-block">
+      <label for="yes" class="form__inner-block">
         <span>Do you love cats? </span>
         <label>
-          <input type="radio" name="cats" value="Yes">Yes
+          <input type="radio" name="cats" id="yes" value="Yes">Yes
         </label>
         <label>
           <input type="radio" name="cats" value="No">No
         </label>
-      </div>
+      </label>
       <label class="form__inner-block">What is your favorite color?
         <input type="color" name="color">
       </label>
       <label class="form__inner-block">What time you going to the bed?
         <input type="time" name="sleep-time" step="5">
       </label>
-      <div class="form__inner-block">
+      <label class="form__inner-block">
         <span>What are your favorite brand of cars? </span>
         <select name="favorite-car" multiple>
           <option value="BMW">BMW</option>
@@ -64,7 +64,7 @@
           <option value="Lada">Lada</option>
           <option value=""></option>
         </select>
-      </div>
+      </label>
       <label class="form__inner-block form__inner--end">How do you rate our work?
         <input type="range" name="rating" min="1" max="10" step="1" value="1">
       </label>
